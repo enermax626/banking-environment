@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRESQL_HOST:localhost}:${POSTGRESQL_PORT:5432}/banking_customer_service
+    driver-class-name: org.postgresql.Driver
+    username: ${APP_DB_USER}
+    password: ${APP_DB_PASSWORD}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - info
+          - health
+
